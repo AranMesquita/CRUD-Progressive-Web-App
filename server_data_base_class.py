@@ -24,7 +24,7 @@ class Server_shopping_List:
             json.dump(list(self.cache_list), cache_file)
             return
 
-    def add_list(self, array: list[str]):
+    def add_list(self, array: list):
         with open(file=self.file, mode='w') as cache_file:
             self.cache_list = set(list(self.cache_list) + array)
             json.dump(list(self.cache_list), cache_file)
