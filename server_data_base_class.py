@@ -10,7 +10,7 @@ class Server_shopping_List:
         self.file = file
         self.cache_list: set[str] = set(self.read_cache())
 
-    def read_cache(self) -> list | list[str]:
+    def read_cache(self) -> list or list[str]:
         with open(file=self.file, mode='r') as cache_file:
             read = cache_file.read()
             if not read:
