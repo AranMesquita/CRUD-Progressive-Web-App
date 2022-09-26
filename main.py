@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify, make_response
 from server_data_base_class import Server_shopping_List
 from pathlib import Path
+from waitress import serve
 
 app = Flask(__name__)
 
@@ -65,4 +66,5 @@ def worker():
 
 
 if __name__ == "__main__":
+    serve(app, host="0.0.0.0", port=8080)
     app.run(debug=True)
