@@ -1,0 +1,55 @@
+#total-float{
+    font-weight: bold !important;
+    font-size:large;
+}
+section{
+    display:flex;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-flow: column wrap!important; 
+}
+.add-item{
+    position:absolute !important;
+    bottom: 1% !important;
+    z-index: 1 !important;
+}
+.py-input{
+    width: 80%;
+    height: 43px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: black;
+    text-decoration-color: antiquewhite; 
+}
+.py-input::placeholder{
+    color: black;
+}
+#list-tasks-container{
+    flex-flow: column !important;
+    width: 70% !important; 
+    height: 580px !important; 
+    overflow: auto !important;
+}
+.task{
+    display:flex !important;
+    justify-content: space-between !important; 
+    text-align: justify !important;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.price-container{
+    margin: 0px;
+}
+#price{
+    width: 10%;
+    
+    border-radius: 5px;
+    transition: width 0.4s ease-in-out;
+}
+#price::placeholder {
+    font-size: 22px !important; 
+}
+#price:focus {
+    width: 20%;
+}
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>Shopping List</title>
+
+    <link rel="manifest" href="/static/assets/Json/manifest.json">
+
+    <link rel="icon" type="image/png" href="/static/assets/images/favicon.png" />
+    
+
+    <link rel="stylesheet" href="/static/pyscript/pyscript.css"/>
+    <link rel="stylesheet" href="/static/assets/CSS/styles.css"/>
+    
+
+    <script defer src="/static/pyscript/pyscript.js"></script>
+
+    <!--<script defer src="https://pyscript.net/latest/pyscript.js"></script>-->
+
+    <py-config>
+      - autoclose_loader: true
+      - runtimes:
+          -
+              src: "/static/pyodide/pyodide.js"
+              name: pyodide-0.20
+              lang: python
+  </py-config>
+
+
+    <py-env>
+    - paths:
+        - /static/assets/Json/Add to server cache.json
+        - /static/assets/Json/Remove from server cache.json
+        - /static/assets/Json/user_shopping_list.json
+        - /static/Python/utils.py
+        - /static/Python/shopping_list.py
+        - /static/Python/item_class.py
+        - /static/Python/emoji_by_best_match_search.py
+        - /static/Python/emoji_dictionary.py
+        - /static/Python/server_requests.py
+        - /static/Python/Cached_shopping_list_class.py
+        - /static/Python/user_shopping_list_class.py
+    </py-env>
+  </head>
+
+  <body class="container">
+  <py-list id="myList"></py-list>
+
+
+  <py-script src="/static/Python/shopping_list.py"></py-script>
+
+  <main>
+    <section>
+
+    <div class="text-center w-full mb-8">
+      <h1 class="text-3xl font-bold text-gray-800 uppercase tracking-tight">Shopping List🛍️</h1>
+      <div id="total-cost-container" class="">
+        <div id="total-float"> 
+          Total: 
+        </div>
+      </div>
+    </div>
+
+    <div id="list-tasks-container" class="flex flex-col-reverse mt-4">
+
+    </div>
+    
+
+  
+    <div class="add-item">
+      <input id="new-task-content" class="py-input"  type="text" placeholder="📜Add Item To List:">
+      <py-button id="new-task-btn" class="py-button" label="✏️">
+          def on_click(evt):
+            add_item()
+      </py-button>
+    </div>
+
+
+    
+    
+
+    <template id="task-template">
+        <div class="task py-li-element">
+          <div class="emoji">
+          <li class="m-0 inline"></li>
+          </div>
+          <input class="mr-2" type="text" id="price" class="task-check" placeholder="🏷️">
+        </div>
+      </template>
+
+  </section>
+  </main>
+  <script src="/static/javascript/pwa-scaffold.js"></script>
+</body>
+</html>
