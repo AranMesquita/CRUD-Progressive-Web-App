@@ -9,7 +9,7 @@ Demo:
 
 </h2>
 <p align="center">
- <img src="" width="275" height="600"/>
+ <img src="https://github.com/AranMesquita/Shopping-List-PWA/blob/main/static/assets/images/Shopping-list-demo.gif" width="275" height="600"/>
 </p>
 
 <h2 align="center">
