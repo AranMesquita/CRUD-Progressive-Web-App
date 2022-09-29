@@ -14,7 +14,7 @@ Demo:
 
 <h2 align="center">
 
-Description:
+Description(The **How** and **Why**):
 
 </h2>
 <p align="center">
