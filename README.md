@@ -33,4 +33,4 @@ Features:
 - 🧮Calculate the cost of all the items
 - 💾Save Shopping List offline
   - ➕Automatically add any offline changes to the centralised shopping list when back online
-- Automatically add the approriate emoji to a given item
+- Automatically add the appropriate emoji to a given item
